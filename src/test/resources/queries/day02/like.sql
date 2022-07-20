@@ -30,3 +30,7 @@ where FIRST_NAME LIKE '%r';
 -- Get all job titles information that ends with manager from jobs table
 select * from JOBS
 where JOB_TITLE LIKE '%Manager'
+
+-- How many employees do we have whose job title ends with manager
+select count(*) from JOBS
+where JOB_TITLE LIKE '%Manager'
