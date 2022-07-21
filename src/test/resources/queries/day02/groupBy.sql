@@ -13,7 +13,8 @@ select avg(SALARY),min(SALARY),sum(SALARY),max(SALARY) from EMPLOYEES
 where JOB_ID='MK_MAN';
 
 -- How many different job_id do we have?
-select count(*)
+select JOB_ID,count(*) JOBS
+group by JOB_ID;
 
 select * from EMPLOYEES
 where JOB_ID='IT_PROG';
@@ -31,3 +32,29 @@ select DEPARTMENT_ID,JOB_ID,sum(SALARY),count(*),min(SALARY) from EMPLOYEES
 where DEPARTMENT_ID is not null
 group by DEPARTMENT_ID, JOB_ID
 order by DEPARTMENT_ID;
+
+-- Get me how many departments we have per location
+select LOCATION_ID,count(*) from DEPARTMENTS
+group by LOCATION_ID;
+
+-- Get me how many locations we have per country
+select COUNTRY_ID,count(*) from LOCATIONS
+group by COUNTRY_ID
+order by 2 asc; -- to sort them based on number of locations
+
+-- Get me how many countries we have per region
+select REGION_ID,count(*) from COUNTRIES
+group by REGION_ID;
+
+--Get me how many employees ARE working for each manager
+select MANAGER_ID,count(*) from EMPLOYEES
+where MANAGER_ID IS NOT NULL -- Ignore null values
+group by MANAGER_ID
+order by 2;
+
+-- Get me manager id's of managers hat have at least five employees
+select MANAGER_ID,count(*) from EMPLOYEES
+where MANAGER_ID IS NOT NULL -- Ignore null values
+group by MANAGER_ID
+having count(*)>5
+order by 2;
