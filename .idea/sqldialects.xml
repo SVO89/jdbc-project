@@ -8,5 +8,7 @@
     <file url="file://$PROJECT_DIR$/src/test/resources/queries/day03/having.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/test/resources/queries/day03/rowNum.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/test/resources/queries/day03/subquery.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/queries/day04/aliases_singleRow.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/queries/day04/views.sql" dialect="GenericSQL" />
   </component>
 </project>
