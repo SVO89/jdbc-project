@@ -114,5 +114,6 @@ select * from AGILETEAM;
 
 -- What is the difference between DROP & TRUNCATE?
 TRUNCATE TABLE AGILETEAM;
+DROP TABLE AGILETEAM;
 -- TRUNCATE will DELETE ALL OF THE DATA inside the table w/a DROP TABLE ???
 COMMIT; --> Save changes
