@@ -35,6 +35,24 @@ public class TestOracleConnection {
         System.out.println(rs.getInt(1));
         System.out.println(rs.getInt("REGION_ID"));
 
+        // Get region name
+        System.out.println(rs.getString(2));
+        System.out.println(rs.getString("REGION_NAME"));
 
+        // Move to the next line
+        rs.next();
+
+        // Americas
+
+        /* rs.next();
+        System.out.println(rs.getInt("REGION_ID") + " - " + rs.getString("REGION_NAME"));
+        rs.next();
+        System.out.println(rs.getInt("REGION_ID") + " - " + rs.getString("REGION_NAME"));
+        rs.next();
+        System.out.println(rs.getInt("REGION_ID") + " - " + rs.getString("REGION_NAME")); */
+
+        while (rs.next()){
+            System.out.println(rs.getInt("REGION_ID") + " - " + rs.getString("REGION_NAME"));
+        }
     }
 }
