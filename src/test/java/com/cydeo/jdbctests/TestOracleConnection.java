@@ -54,5 +54,9 @@ public class TestOracleConnection {
         while (rs.next()){
             System.out.println(rs.getInt("REGION_ID") + " - " + rs.getString("REGION_NAME"));
         }
+        // Close connection
+        rs.close();
+        statement.close();
+        conn.close();
     }
 }
